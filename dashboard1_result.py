@@ -71,7 +71,7 @@ fig2 = px.line(df_results,x=df_results.columns[0],y=df_results.columns[1:12])
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__,external_stylesheets=external_stylesheets,suppress_callback_exceptions=True)
-
+server = app.server
 app.layout = html.Div([
     html.H2('IST Energy Forecast tool (kWh)'),
     dcc.Tabs(id='tabs',value='tab-1',children=[
